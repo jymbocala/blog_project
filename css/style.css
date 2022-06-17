@@ -61,13 +61,9 @@ button {
     padding: 50px 100px 50px 100px;
 }
 
-.card-col {
-    padding: 5%;
-}
-
 .card {
     border-radius: 5px;
-    padding: 1rem;
+    /* padding: 1rem; */
     margin: 10px;
 }
 
