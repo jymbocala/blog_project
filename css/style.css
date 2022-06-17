@@ -75,12 +75,6 @@ button {
 color: #3185FC;
 }
 
-.img-thumbnail {
-width: 300px;
-height: 100px;
-border-radius: 6px;
-}
-
 #date {
 font-size: smaller;
 color: lightgray;
