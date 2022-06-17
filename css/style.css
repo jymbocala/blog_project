@@ -14,7 +14,7 @@ body {
     justify-content: space-between;
 }
 
-.container{
+.container {
     display:grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
@@ -25,11 +25,11 @@ body {
     max-width: 1500px !important;
 }
 
-.box{
+.box {
     display: grid;
-    }
+}
 
-.footer{
+.footer {
     grid-area: ft;  
 }
 
@@ -58,12 +58,12 @@ button {
 }
 
 .category {
-color: #3185FC;
+    color: #3185FC;
 }
 
 #date {
-font-size: smaller;
-color: lightgray;
+    font-size: smaller;
+    color: lightgray;
 }
      
 /*  FOOTER STYLES*/ 
@@ -71,10 +71,9 @@ color: lightgray;
     padding: 2.5rem 0;
     text-align: center;
     border-top: 1px solid #e5e5e5;
-
 }
 
-  /* MEDIA QUERIES*/
+/* MEDIA QUERIES*/
 @media (max-width: 768px) {
     .col-md-3 {
         text-align: center;
