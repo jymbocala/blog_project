@@ -1,0 +1,40 @@
+.all-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card-col {
+    max-width: 30%;
+}
+
+.card {
+    border-radius: 5px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.card > img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-body  > * {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.category {
+    font-size: small;
+}
+
+.date {
+    color: grey;
+}
+    

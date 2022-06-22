@@ -1,0 +1,23 @@
+/* MEDIA QUERIES*/
+@media (max-width: 800px) {
+    .all-card {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-col {
+        min-width: 80%;
+    }
+
+    .header-row {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    #search-icon {
+        float: none;
+    }
+}
