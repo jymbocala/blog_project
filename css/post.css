@@ -78,6 +78,12 @@ h1 {
     text-align: center;
 }
 
+.nav-title a {
+    text-align: center;
+    color: inherit;
+    text-decoration: inherit;
+}
+
 button {
     color: #6c757d;
     background-color: transparent;
