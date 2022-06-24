@@ -121,15 +121,9 @@ figure > img {
     height: auto;
 }
 
-
 /* SIDEBAR STYLES */
 .sidebar {
     padding-top: 4rem;
-}
-
-.sidebar *{
-    position: sticky;
-    top: 2rem;
 }
 
 .sidebar h4 {
