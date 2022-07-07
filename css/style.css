@@ -1,51 +1,77 @@
+@import "layout.css";
+@import "blog-cards.css";
+@import "media-queries.css";
+
 * {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    /* border: red solid 1px; */
 }
 
-body {
+html, body {
     margin: 0px;
+    line-height: 1.6;
+    width: 100%;
+    height: 100%;
 }
 
-.main-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.link-secondary {
+    color: #6c757d;
 }
 
-.container {
-    display:grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-    "hd"
-    "main"
-    "ft";
-    max-width: 1500px !important;
+.text-yellow {
+    color: #F4C430;
 }
 
-.box {
-    display: grid;
+.text-green {
+    color: #228B22;
 }
 
-.footer {
-    grid-area: ft;  
+.text-blue {
+    color: #3185FC;
 }
+
+
 
 /* HEADER STYLES */
-#search-icon {
-    float: right;
+header {
+    padding: 1rem;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-row > * {
+    flex-grow: 1;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .nav-title {
     text-align: center;
 }
 
+.nav-title a {
+    text-align: center;
+    color: inherit;
+    text-decoration: inherit;
+}
+
 button {
     color: #6c757d;
     background-color: transparent;
     border: none;
+    float: right;
 }
 
 .header-border {
@@ -53,33 +79,17 @@ button {
 }
 
 /* MAIN STYLES*/
-.card {
-    border-radius: 5px;
+main {
+    margin-top: 4rem;
 }
 
-.category {
-    color: #3185FC;
-}
-
-#date {
-    font-size: smaller;
-    color: lightgray;
-}
-     
+ 
 /*  FOOTER STYLES*/ 
-.blog-footer {
+footer {
+    margin-top: 4rem;
+    background-color: #f5f5f5;
     padding: 2.5rem 0;
     text-align: center;
     border-top: 1px solid #e5e5e5;
 }
 
-/* MEDIA QUERIES*/
-@media (max-width: 768px) {
-    .col-md-3 {
-        text-align: center;
-    }
-
-    #search-icon {
-        float: none;
-    }
-}

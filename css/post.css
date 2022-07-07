@@ -4,80 +4,237 @@
     /* border: red solid 1px; */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
+body {
+    margin: 0px;
+    line-height: 1.6;
+    max-width: 100%;
+    height: 100%;
 }
 
-.vh {
-    min-height: 100vh;
+.post-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+        "hd hd"
+        "main sd"
+        "sc sc"
+        "ft ft";
+    min-height: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+
+header {
+    grid-area: hd;
+}
+
+.main-col {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sd;
+}
+
+.sub-section {
+    grid-area: sc;
+}
+
+footer {
+    grid-area: ft;  
+}
+
+.link-secondary {
+    color: #6c757d;
+}
 /* HEADER STYLES */
-#search-icon {
-    float: right;
+header {
+    padding: 1rem;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-row > * {
+    flex-grow: 1;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .nav-title {
     text-align: center;
 }
 
+.nav-title a {
+    text-align: center;
+    color: inherit;
+    text-decoration: inherit;
+}
+
 button {
     color: #6c757d;
     background-color: transparent;
     border: none;
+    float: right;
 }
 
 .header-border {
     border-bottom: 1px solid #e5e5e5;
 }
 
-/* MAIN STYLES */
-.main {
-    margin-top: 2rem;
-
-}
-
-.blog-post-meta {
-    color: #727272;
-}
-
 figure {
     text-align: center;
-    padding: 1rem;
+}
+
+/* MAIN STYLES */
+.main-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 2rem;
+}
+
+.post-meta {
+    margin: 0;
+
+}
+
+figure > img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* SIDEBAR STYLES */
-.main-about {
-    background-color: lightcyan;
+.sidebar {
+    padding-top: 4rem;
 }
 
-.col-md-4 h4 {
+.sidebar h4 {
     font-style: italic;
 }
 
+.main-about {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: lightcyan;
+    padding: 1rem;
+    min-width: 100%;
+    border-radius: 5px;
+}
+
 .avatar {
-    vertical-align: middle;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-  }
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
 
 .connect {
     color: #727272;
 }
 
+.main-archives {
+    padding: 1rem;
+}
+
+.main-elsewhere {
+    padding: 1rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* SUB SECTION STYLES */
+.sub-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    min-width: 75%;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+
+form input{
+    min-width: 85%;
+    height: 3em;
+}
+
+.sub-section button {
+    background-color: #0d6efd;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    float: none;
+    margin: 1em 0 1em 0;
+    font-size: medium;
+}
+
 /* FOOTER STYLES */
-.blog-footer {
+footer {
+    margin-top: 2rem;
+    background-color: #f5f5f5;
     padding: 2.5rem 0;
     text-align: center;
     border-top: 1px solid #e5e5e5;
-
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 768px) {
-    .col-md-3 {
-        text-align: center;
+@media (max-width: 800px) {
+    .post-container {
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: auto 1fr auto auto auto;
+        grid-template-areas:
+            "hd"
+            "main"
+            "sd"
+            "sc"
+            "ft";
+        min-height: 100%;
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-row {
+        display: flex;
+        flex-flow: column wrap;
     }
 
     #search-icon {
